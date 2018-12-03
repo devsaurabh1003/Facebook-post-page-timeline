@@ -172,7 +172,7 @@
 					print $e->getMessage();
 					exit();
 				}
-				unlink("http://localhost/fb-login-post/" . $photoPath);
+				unlink($photoPath);
 			}
 			elseif($postOn=='' && $photoPath==''){
 				$this->params = array(
@@ -234,7 +234,7 @@
 					print $e->getMessage();
 					exit();
 				}
-				unlink("http://localhost/fb-login-post/" . $photoPath);
+				unlink($photoPath);
 			}
 			else
 			{
