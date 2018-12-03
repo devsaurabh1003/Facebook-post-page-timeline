@@ -160,11 +160,15 @@
 				);
 				try {
 					$postResponse = $this->fb->post("/me/photos", $this->params, $this->accessToken);
+					echo 'The post was published successfully to the Facebook timeline.';					
 					} catch (FacebookResponseException $e) {
 					// display error message
+					echo 'The post was not published to the Facebook timeline.Please <a href="dashboard.php">Retry</a>';					
+					
 					print $e->getMessage();
 					exit();
 					} catch (FacebookSDKException $e) {
+					echo 'The post was not published to the Facebook timeline.Please <a href="dashboard.php">Retry</a>';					
 					print $e->getMessage();
 					exit();
 				}
@@ -176,11 +180,14 @@
 				);
 				try {
 					$postResponse = $this->fb->post("/me/feed", $this->params, $this->accessToken);
+					echo 'The post was published successfully to the Facebook timeline.';					
 					} catch (FacebookResponseException $e) {
 					// display error message
+					echo 'The post was not published to the Facebook timeline.Please <a href="dashboard.php">Retry</a>';
 					print $e->getMessage();
 					exit();
 					} catch (FacebookSDKException $e) {
+					echo 'The post was not published to the Facebook timeline.Please <a href="dashboard.php">Retry</a>';
 					print $e->getMessage();
 					exit();
 				}
@@ -193,11 +200,15 @@
 				);
 				try {
 					$postResponse = $this->fb->post($postOn[0] . '/feed/', $this->params, $postOn[1]);
+					echo 'The post was published successfully to the Facebook timeline.';					
 					} catch (FacebookResponseException $e) {
+					
 					// display error message
+					echo 'The post was not published to the Facebook timeline.Please <a href="dashboard.php">Retry</a>';
 					print $e->getMessage();
 					exit();
 					} catch (FacebookSDKException $e) {
+					echo 'The post was not published to the Facebook timeline.Please <a href="dashboard.php">Retry</a>';
 					print $e->getMessage();
 					exit();
 				}
@@ -208,15 +219,18 @@
 				$this->params = array(
 				'message' => $content,
 				"image" => $this->fb->fileToUpload("http://localhost/fb-login-post/" . $photoPath)
-
+				
 				);
 				try {
 					$postResponse = $this->fb->post($postOn[0] . '/photos/', $this->params, $postOn[1]);
+			        echo 'The post was published successfully to the Facebook timeline.';
 					} catch (FacebookResponseException $e) {
 					// display error message
+					echo 'The post was not published to the Facebook timeline.Please <a href="dashboard.php">Retry</a>';
 					print $e->getMessage();
 					exit();
 					} catch (FacebookSDKException $e) {
+					echo 'The post was not published to the Facebook timeline.Please <a href="dashboard.php">Retry</a>';
 					print $e->getMessage();
 					exit();
 				}
@@ -228,5 +242,5 @@
 			}
 		}
 	}
-
+	
 ?> 
