@@ -1,0 +1,75 @@
+body {
+    width: 550px;
+    font-family: Arial;
+}
+
+
+.post-date {
+    color: #8e8e8e;
+    font-size: 0.8em;
+    font-style: italic;
+    padding: 4px;
+    background: #F0F0F0;
+}
+
+#post-box {
+    width: 100%;
+    background: #FFF;
+    border: 1px solid #dddfe2;
+    border-radius: 3px;
+}
+
+#post-box-footer {
+    overflow: auto;
+    position: relative;
+}
+
+textarea.photo-caption {
+    padding: 10px 8px;
+    width: 100%;
+    background-color: #fff;
+    color: #191919;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0px;
+    box-sizing: border-box;
+}
+
+input[type="submit"].photo_publish {
+    width: auto;
+    padding: 5px 20px;
+	background: #5e7ebb;
+    border: #5674ad 1px solid;
+    color: #FFF;
+    margin: 4px 8px 8px 0px;
+    float: right;
+	
+	clear:right;
+}
+div.postOn{
+	
+	float: right;
+}
+div.postOn select{
+	width: auto;
+	padding: 5px 20px;
+	border: #5674ad 1px solid;
+	color: #5e7ebb;
+	margin: 4px 8px 8px 0px;
+}
+
+input#media-file-input {
+    width: 24px;
+    height: 24px;
+    z-index: 10;
+    position: absolute;
+    left: 8px;
+    top: 4px;
+    padding: 0px;
+    opacity: 0;
+}
+.photo-icon {
+    margin: 4px 0px 8px 8px;
+    float: left;
+    cursor: pointer;
+}
