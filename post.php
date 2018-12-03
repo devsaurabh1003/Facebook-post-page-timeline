@@ -13,5 +13,6 @@
     }
     $myFB->uploadPost($_POST["content"],$photoPath,$_POST["postOn"]);
 	
-	header("location:dashboard.php");
-}
+	// header("location:dashboard.php");
+} ?>
+<a href='dashboard.php'>Dashboard</a>
